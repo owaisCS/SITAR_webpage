@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="description"
+              content="SITUATE: Indoor Human Trajectory Prediction through Geometric Features and Self-Supervised Vision Representation. Accepted @ ICPR 2024.">
+        <meta name="keywords" content="Human Trajectory Prediction, Geometric Deep Learning, Self-Supervised Vision Representation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SITAR: Semi-Supervised Image Transformer for Action Recognition</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+              rel="stylesheet">
+
+        <link rel="stylesheet" href="./static/css/bulma.min.css">
+        <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+        <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+        <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+        <link rel="stylesheet" href="./static/css/index.css">
+        <link rel="icon" href="./static/images/intelligo.png">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script defer src="./static/js/fontawesome.all.min.js"></script>
+        <script src="./static/js/bulma-carousel.min.js"></script>
+        <script src="./static/js/bulma-slider.min.js"></script>
+        <script src="./static/js/index.js"></script>
+    </head>
+
+    <body>
+        <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+                    <a class="navbar-item" target="_blank" href="https://capogrosso.eu">
+                        <span class="icon">
+                            <i class="fas fa-home"></i>
+                        </span>
+                    </a>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                          More Research
+                        </a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" target="_blank" href="https://github.com/intelligolabs">
+                                Intelligo ML Lab
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav> -->
+
+        <!-- Title, authors, institution, links. -->
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container is-max-desktop">
+                    <div class="columns is-centered">
+                        <div class="column has-text-centered">
+                            <h1 class="title is-1 publication-title">SITAR: Semi-Supervised Image Transformer for Action Recognition</h1>
+                            <div class="is-size-5 publication-authors">
+                                <span class="author-block">
+                                    <a target="_blank" href="https://scholar.google.com/citations?user=DUNOjt8AAAAJ&hl=en">Owais Iqbal</a><sup>1</sup>,
+                                </span>
+                                <span class="author-block">
+                                    <a target="_blank" href="https://scholar.google.com/citations?hl=en&user=Z0uiqiIAAAAJ">Omprakash Chakraborty</a><sup>1</sup>,
+                                </span>
+                                <span class="author-block">
+                                    <a target="_blank" href="https://www.linkedin.com/in/aftab-hussain-963329113?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"> Aftab Hussain</a><sup>1</sup>,
+                                </span>
+                                <span class="author-block">
+                                    <a target="_blank" href="https://rpand002.github.io/">Rameswar Panda</a><sup>2</sup>,
+                                </span>
+                                <span class="author-block">
+                                    <a target="_blank" href="https://cse.iitkgp.ac.in/~adas/">Abir Das</a><sup>1</sup>,
+                                </span>
+                            </div>
+
+                            <div class="is-size-5 publication-authors">
+                              <span class="author-block">
+                                  <sup>1</sup>
+                                  IIT-Kharagpur, India
+                              </span>
+                              <span class="author-block">
+                                  <sup>2</sup>
+                                  MIT-IBM Watson AI Lab
+                              </span>
+                            </div>
+
+                            <div class="column has-text-centered">
+                                <div class="publication-links">
+                                    <!-- Proceedings link. -->
+                                    <span class="link-block">
+                                        <a target="_blank" href="" class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="fas fa-file-pdf"></i>
+                                            </span>
+                                            <span>Paper</span>
+                                        </a>
+                                    </span>
+                                    <!-- arXiv link. -->
+                                    <span class="link-block">
+                                        <a target="_blank" href="" class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="ai ai-arxiv"></i>
+                                            </span>
+                                            <span>arXiv</span>
+                                        </a>
+                                    </span>
+                                    <!-- Code link. -->
+                                    <span class="link-block">
+                                        <a target="_blank" href="https://github.com/intelligolabs/SITUATE" class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="fab fa-github"></i>
+                                            </span>
+                                        <span>Code</span>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="columns is-centered">
+                                <div class="column has-text-centered">
+                                    <span class="tag is-success is-primary is-large">🎉 Accepted @ ICPR 2024 🎉</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teaser. -->
+        <section class="hero teaser">
+            <div class="container is-max-desktop">
+                <div class="hero-body has-text-centered">
+                    <img src="./static/images/ssvarit_framework.png" alt="MTL-Split teaser" type="image/png" style="width: 85%; height: 85%;">
+                    <h6 class="subtitle is-6 has-text-centered">
+                      The proposed framework uses two pathways to process
+                      the unlabeled videos, namely, Primary and Secondary, using an image-transformer
+                      backbone and sharing the same weights. The Primary pathway is initially trained
+                      with limited labeled data. Then, we generate two versions of super images for the
+                      unlabeled videos, one fast, having more frames and other slow, having lower frames
+                      and pass them through Primary and Secondary pathways respectively. The training
+                      objective is to maximize the agreement between the output predictions of the two
+                      pathways. To achieve this, we employ two types of contrastive losses. First, an instance
+                      contrastive loss to align the representations of a given unlabeled super image across
+                      both the pathways. Second, a group contrastive loss to align the average representations
+                      of unlabeled super images grouped using pseudo-labels. During inference, only the
+                      Primary pathway is used to indentify actions. (Best viewed in color.)
+                    </h6>
+                </div>
+            </div>
+        </section>
+
+        <!-- Abstract. -->
+        <section class="section">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-four-fifths">
+                        <h2 class="title is-3">Abstract</h2>
+                        <div class="content has-text-justified">
+                            <p>
+                              Recognizing actions from a limited set of labeled videos remains a challenge as annotating visual data is not only tedious but also
+                              can be expensive due to classified nature. Moreover, handling spatiotemporal data using deep 3D transformers for this can introduce significant computational complexity. In this paper, our objective is to address
+                              video action recognition in a semi-supervised setting by leveraging only
+                              a handful of labeled videos along with a collection of unlabeled videos
+                              in a compute efficient manner. Specifically, we rearrange multiple frames
+                              from the input videos in row-column form to construct super images.
+                              Subsequently, we capitalize on the vast pool of unlabeled samples and
+                              employ contrastive learning on the encoded super images. Our proposed
+                              approach employs two pathways to generate representations for temporally augmented super images originating from the same video. Specifically, we utilize a 2D image-transformer to generate representations and
+                              apply a contrastive loss function to minimize the similarity between representations from different videos while maximizing the representations
+                              of identical videos. Our method demonstrates superior performance compared to existing state-of-the-art approaches for semi-supervised action
+                              recognition across various benchmark datasets, all while significantly reducing computational costs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Citation. -->
+        <section class="section" id="BibTeX">
+            <div class="container is-max-desktop content">
+                <h2 class="title">BibTeX</h2>
+<pre><code>TBA.
+</code></pre>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="content has-text-centered">
+                    <a class="icon-link" target="_blank" href="https://github.com/luigicapogrosso" class="external-link" disabled>
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <div class="columns is-centered">
+                    <div class="column is-8">
+                        <div class="content">
+                            <p>
+                                This website is licensed under a <a rel="license" target="_blank"
+                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                                Commons Attribution-ShareAlike 4.0 International License</a>.
+                            </p>
+                            <p>
+                                The source code is based on <a target="_blank" href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+</html>
